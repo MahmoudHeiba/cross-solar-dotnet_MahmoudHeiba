@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace CrossSolar.Domain
 {
@@ -8,7 +9,8 @@ namespace CrossSolar.Domain
 
         public string PanelId { get; set; }
 
-        public long KiloWatt { get; set; }
+        [Range(0, 9999999.999)]
+        public double KiloWatt { get; set; }
 
         public DateTime DateTime { get; set; }
     }
